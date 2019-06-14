@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('loginCtrl', function($scope) {
-  $('.toggle').click(function(){
+  $('.togglelogin').click(function(){
     $('.formulario').animate({
         height: "toggle",
         'padding-top': 'toggle',
@@ -12,13 +12,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+  $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('ul').toggleClass('active');
+        })
+    })
 
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
@@ -27,7 +25,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+  $scope.Pokebola = [];
+  for(var M=1; M<=500;M++)
+  $http({
+    method: "GET",
+    url: "https://pokeapi.co/api/v2/pokemon/" + M
+  }).then(function succes(x){
+    $scope.Pokebola.push(x);
+  })
 })
 
 .controller('AccountCtrl', function($scope) {

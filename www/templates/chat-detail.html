@@ -1,14 +1,29 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
-<ion-view view-title="{{chat.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
+<ion-view view-title="pokemons">
+  <ion-content class="padding" class="">
+  <div class="container fullContainer">
+      <!-- Header Bar -->
+      <div class="row fullWidth">
+        <div class="col-md-12 text-center header">
+          <h4 class="title">NEW POKEDEX</h4>
+        </div>
+      </div>
+      <!-- Pokemon Container Info -->
+      <br/>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-3 text-center col-sm-4"  ng-repeat="x in Pok | orderBy : 'id'" ng-if="x.data != undefined "> -->
+          <div class="col-md-3 text-center col-sm-4" ng-repeat="y in Pokebola">
+            <div class="divInfo">
+              <!-- Pokemon Picture -->
+              <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
+              <img class="pokePicture" src="{{y.data.sprites.front_default}}" alt="Poke">
+            </div>
+            <!-- <div class="pokeName">{{x.data.name}}</div> -->
+            <div class="pokeName">{{y.data.name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </ion-content>
 </ion-view>

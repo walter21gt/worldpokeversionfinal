@@ -27,17 +27,17 @@ img:hover {
 
 .contenedor-form {
     background: rgba(0,0,0,.7);
+    font-family: Roboto;
     max-width: 500px;
-    width: 100%;
+    width: 100%;    
     margin: 48px auto;
-    margin-top: 7%;
     border-radius: 5px;
     color: #fff;
     position: relative;
-    /*padding: 40px;*/
+    padding: 0px
 }
 
-.contenedor-form .toggle {
+.contenedor-form .togglelogin {
     position: absolute;
     top: 7px;
     right: 7px;
@@ -52,12 +52,12 @@ img:hover {
     transition: all .5s ease;
 }
 
-.contenedor-form .toggle:hover {
+.contenedor-form .togglelogin:hover {
     border-top: 2px solid #0075d9;
     border-bottom: 2px solid #0075d9;
 }
 
-.contenedor-form .toggle span {
+.contenedor-form .togglelogin span {
     letter-spacing: 1px;
 }
 
@@ -106,11 +106,27 @@ img:hover {
     cursor: pointer;
     transition: all .5s ease;
 }
+.contenedor-form input[type="button"] {
+    background: #FF851B;
+    color: #FFF;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
 
 .contenedor-form input[type="submit"]:hover {
     background: rgba(0, 117, 217, 0.7);
 }
 
+.contenedor-form input[type="button"]:hover {
+    background: rgba(0, 117, 217, 0.7);
+}
 .contenedor-form .reset-password {
     background: rgba(0, 117, 217, .7);
     width: 100%;
@@ -134,31 +150,150 @@ img:hover {
 .contenedor-form .formulario:nth-child(2) {
     display: block;
 }
-
-iframe {
-
-}
 .user
 {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	overflow: hidden;
-	position: absolute;
-	top: calc(-100px/2);
-	left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(-100px/2);
+    left: calc(50% - 50px);
 }
-/*bienvenida*/
+/* la bienvenida*/
 .fondobienve {
-  background:#2B3442;
-  height: 560px;
+    background:#205C8C;
+    margin: auto;
 }
-.containerpiepag {
-  background: #202532;
+.fondobiebve2 {
+
 }
-.titulo {
-  color:#fff;
+.oak {
+    height: 250px;
+    margin-left: 19%;
 }
-.nombres {
-  color: #A4B3CD;
+.textwelcome {
+    background: #FFF;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    border-radius: 5px;
+    border:solid 5px #6C6D6D;
+    font-weight: normal;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 1px rgba(26,56,80,5);
+}
+.textoak {
+    color:#6C6D6D;
+    padding: 4.3%;     
+    font-size: 15px;
+    position: relative;
+}
+p span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #FFF;
+    animation: maquina 7s infinite alternate steps(50);
+
+}
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+/*boton*/
+.container a
+{
+    position: absolute;
+    display: block;
+    padding: 20px 40px;
+    margin-top: 2%;
+    margin-left: 20%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+.container a:before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.container a:hover:before
+{
+    left: 100%;
+}
+.container a span:nth-child(odd)
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s ease-in-out;
+}
+.container a span:nth-child(1)
+{
+    top: 0;
+    left: 50%;
+}
+.container a span:nth-child(3)
+{
+    bottom: 0;
+    right: 50%;
+}
+.container a:hover span:nth-child(1)
+{
+    top: 0;
+    left: -50%;
+}
+.container a:hover span:nth-child(3)
+{
+    bottom: 0;
+    right: -50%;
+}
+
+.container a span:nth-child(even)
+{
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s ease-in-out;
+}
+a span:nth-child(2)
+{
+    top: 50%;
+    left: 0;
+}
+a span:nth-child(4)
+{
+    bottom: 50%;
+    right: 0;
+}
+a:hover span:nth-child(2)
+{
+    top: -50%;
+    left: 0;
+}
+a:hover span:nth-child(4)
+{
+    bottom: -50%;
+    right: 0;
 }
